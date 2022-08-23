@@ -37,8 +37,8 @@ Desktop design
 
 ### Links
 
-- Solution URL: [Clipboard landing page]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [Clipboard landing page](https://www.frontendmentor.io/solutions/clipboard-landing-page-y3FGnmREfK)
+- Live Site URL: [Add live site URL here](https://jpbyte.github.io/clipboard-landing-page/)
 
 ## My process
 
