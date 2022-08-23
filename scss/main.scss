@@ -1,0 +1,687 @@
+//Primary
+
+$Strong-Cyan: hsl(171, 66%, 44%);
+$Light-Blue: hsl(233, 100%, 69%);
+
+//Neutral
+
+$Dark-Grayish-Blue: hsl(214, 10%, 27%);
+$Grayish-Blue: hsl(202, 11%, 66%);
+
+@mixin centralizar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+
+@keyframes flutuar {
+    0%{
+        transform: translateY()
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    75%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes go-back {
+    from {
+      transform: translateX(400px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}   
+
+
+@keyframes go-go {
+    from {
+      transform: translateX(-400px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+body{
+    background: url(../images/bg-header-desktop.png) no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+            header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+                img{
+                    width: 100px;
+                    margin-top: 84px;
+                    margin-bottom: 46px;
+                    animation: flutuar 3s infinite;
+                }
+            .header-central{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 658px;
+            }    
+             h1{
+                font-size: 40px;
+                color: $Dark-Grayish-Blue;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+             .header-p{
+                text-align: center;
+                font-size: 18px;
+                color: $Grayish-Blue;
+                margin-bottom: 30px;
+                line-height: 26px;
+            }
+            .buttons{
+                width: 440px;
+                display: flex;
+                justify-content: space-between;
+                    .ios{
+                        width: 200px;
+                        height: 42px;
+                        font-size: 16px;
+                        color: white;
+                        background-color: $Strong-Cyan;
+                        border: none;
+                        border-radius: 20px;
+                        border-bottom: hsl(171, 65%, 33%) solid;
+                        transition: 1s ease-in-out;
+                        cursor: pointer;
+                           &:hover{
+                            transform: scale(1.1);
+                         }
+                    }
+                    .mac{
+                        width: 200px;
+                        height: 42px;
+                        font-size: 16px;
+                        color: white;
+                        background-color: $Light-Blue;
+                        border: none;
+                        border-radius: 20px;
+                        border-bottom: hsl(233, 46%, 48%) solid;
+                        transition: 1s ease-in-out;
+                        cursor: pointer;
+                            &:hover{
+                                transform: scale(1.1);
+                            }
+                    }
+            }
+        }
+            main{
+                @include centralizar();
+                    .main-h2-1{
+                        font-size: 34px;
+                        color: $Dark-Grayish-Blue;
+                        font-weight: 600;
+                        margin-bottom: 20px;
+                    }
+                    .main-p-1{
+                        font-size: 18px;
+                        text-align: center;
+                        width: 695px;
+                        color: $Grayish-Blue;
+                        font-weight: 400;
+                        line-height: 26px;
+                        margin-bottom: 90px;
+                    }
+                
+                    .section-1{
+                        display: flex;
+                        margin-bottom: 170px;
+                            .computer-image{
+                                margin-left: -31px;
+                                animation: go-go 2s;
+                            }
+                            .computer-text{
+                                padding: 105px 87px;
+                                margin-top: -70px;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                    .first-text{
+                                        width: 66%;
+                                        
+                                    }
+                                    .secund-text{
+                                        width: 66%;
+                                    }
+                                    .third-text{
+                                        width: 65%;
+                                    }
+                                    .section-h2-1{
+                                        font-size: 24px;
+                                        color: $Dark-Grayish-Blue;
+                                        font-weight: 600;
+                                        margin-bottom: 10px;
+                                    }
+                                    .section-p-1{
+                                        font-size: 16px;
+                                        width: 100%;
+                                        line-height: 27px;
+                                        color: $Grayish-Blue;
+                                        font-weight: 400;
+                                    }
+                            }    
+                    }
+                    .access{
+                        color: $Dark-Grayish-Blue;
+                        font-weight: 600;
+                        font-size: 36px;
+                        margin-bottom: 24px;
+                    }
+                    .access-p{
+                        color: $Grayish-Blue;
+                        font-weight: 400;
+                        font-size: 18px;
+                        text-align: center;
+                        width: 50%;
+                        margin-bottom: 100px;
+                        line-height: 29px;
+                    }  
+                    .devices{
+                        margin-bottom: 53px;
+                        animation: go-back 2s;
+                        
+                    }
+                    .supercharge{
+                        color: $Dark-Grayish-Blue;
+                        font-weight: 600;
+                        font-size: 36px;
+                        margin-bottom: 17px;
+                    }
+                    .supercharge-p{
+                        color: $Grayish-Blue;
+                        font-weight: 400;
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 61px;
+                        
+                    }
+
+                 .icones{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 71%;
+                    align-items: center;
+                    margin-bottom: 150px;
+                        .blacklist{
+                            width: 20%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                                img{
+                                    margin-bottom: 40px;
+                                    animation: flutuar 3s infinite;
+                                }
+                                
+                                .icones-h3{
+                                    margin-bottom: 29px;
+                                    color: $Dark-Grayish-Blue;
+                                    font-size: 23px;
+                                }
+                                .icones-p{
+                                    text-align: center;
+                                    width: 336px;
+                                    font-size: 16px;
+                                    line-height: 25px;
+                                    color: $Grayish-Blue;
+                                    font-weight: 400;
+                                }
+                        }
+                        .plain{
+                            width: 20%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            height: 204px;
+                                img{
+                                margin-bottom: 40px;
+                                animation: flutuar 3s infinite;
+                                }
+                                .icones-h3{
+                                    margin-bottom: 29px;
+                                    color: $Dark-Grayish-Blue;
+                                    font-size: 23px;
+                                }
+                                .icones-p{
+                                    text-align: center;
+                                    width: 336px;
+                                    font-size: 16px;
+                                    line-height: 25px;
+                                    color: $Grayish-Blue;
+                                    font-weight: 400;
+                                }
+                        }
+                        .sneak{
+                            width: 20%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            height: 204px;
+                                img{
+                                margin-bottom: 40px;
+                                animation: flutuar 3s infinite;
+                                }
+                                .icones-h3{
+                                    margin-bottom: 29px;
+                                    color: $Dark-Grayish-Blue;
+                                    font-size: 23px;
+                                }
+                                .icones-p{
+                                    text-align: center;
+                                    width: 336px;
+                                    font-size: 16px;
+                                    line-height: 25px;
+                                    color: $Grayish-Blue;
+                                    font-weight: 400;
+                                }
+                        }
+                 }
+                 .logos{
+                    width: 91%;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-bottom: 150px;
+                        img{
+                            height: 45px;
+                            width: 140px;
+                            
+                        }
+                 }
+                 .clip{
+                    font-size: 34px;
+                    color: $Dark-Grayish-Blue;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                 }
+                 .clip-p{
+                    text-align: center;
+                    width: 613px;
+                    font-size: 16px;
+                    line-height: 25px;
+                    color: $Grayish-Blue;
+                    font-weight: 400;
+                    margin-bottom: 40px;
+                 }
+                 .buttons-footer{
+                    
+                        width: 440px;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-bottom: 150px;
+                            .ios{
+                                width: 200px;
+                                height: 42px;
+                                font-size: 16px;
+                                color: white;
+                                background-color: $Strong-Cyan;
+                                border: none;
+                                border-radius: 20px;
+                                border-bottom: hsl(171, 65%, 33%) solid;
+                                transition: 1s ease-in-out;
+                                cursor: pointer;
+                                   &:hover{
+                                    transform: scale(1.1);
+                                 }
+                            }
+                            .mac{
+                                width: 200px;
+                                height: 42px;
+                                font-size: 16px;
+                                color: white;
+                                background-color: $Light-Blue;
+                                border: none;
+                                border-radius: 20px;
+                                border-bottom: hsl(233, 46%, 48%) solid;
+                                transition: 1s ease-in-out;
+                                cursor: pointer;
+                                    &:hover{
+                                        transform: scale(1.1);
+                                    }
+                            
+                    }
+                 }
+        }
+        footer{
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(159, 171, 178, 0.1);
+            padding: 46px;
+            justify-content: space-around;
+                .logo-c{
+                    width: 60px;
+                    animation: flutuar 3s infinite;
+                }
+                .footer-text{
+                    display: flex;
+                    flex-direction: column;
+                    width: 604px;
+                    font-size: 21px;
+                    transition: 1s;
+                    cursor: pointer;    
+                        p{
+                            transition: 1s ease-in-out;
+                            &:hover{
+                                color: $Strong-Cyan;
+                            }
+                        }
+                        .contend-1{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-bottom: 20px;
+                            width: 525px;
+                        }
+                        .contend-2{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 278px;
+                        }
+                    
+                }
+                .lista{
+                    ul{
+                        display: flex;
+                        list-style: none;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 138px;
+                            li{
+                                transition: 1s ease-in-out;
+                                cursor: pointer;
+                                        &:hover{
+                                            filter: brightness(0) saturate(100%) invert(48%) sepia(99%) saturate(336%) hue-rotate(122deg) brightness(105%) contrast(87%);
+                                    }
+                            }
+                        }
+                    }
+                }
+
+@media (max-width:1000px){
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+        header{
+            .header-central{
+                margin-bottom: 35px;
+                h1{
+                    text-align: center;
+                    font-size: 67px;
+                }
+                .header-p{
+                    text-align: center;
+                    font-size: 34px;
+                    line-height: 50px;
+                }
+            }
+            .buttons{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                    .ios{
+                        margin-bottom: 45px;
+                        font-size: 35px;
+                        border-radius: 63px;
+                        width: 400px;
+                        height: 85px;
+                    }
+                    .mac{
+                        font-size: 35px;
+                        border-radius: 63px;
+                        width: 400px;
+                        height: 85px;
+                    }
+            }
+        }
+        main{
+            .main-h2-1{
+                text-align: center;
+                font-size: 66px;
+                width: 583px;
+            }
+            .main-p-1{
+                text-align: center;
+                font-size: 36px;
+                line-height: 50px;
+            }
+            .section-1{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 350px;
+                    .computer-image{
+                        margin-bottom: 130px;
+                    }
+                    .computer-text{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        padding: 0;
+                            .first-text{
+                                .section-h2-1{
+                                    font-size: 66px;
+                                }
+                                .section-p-1{
+                                    font-size: 36px;
+                                    line-height: 57px;
+                                    margin-bottom: 70px;
+                                }
+                                
+                            }
+                            .secund-text{
+                                .section-h2-1{
+                                    font-size: 66px;
+                                }
+                                .section-p-1{
+                                    font-size: 36px;
+                                    line-height: 57px;
+                                    margin-bottom: 70px;
+                                }
+                            }
+                            .third-text{
+                                .section-h2-1{
+                                    font-size: 66px;
+                                }
+                                .section-p-1{
+                                    font-size: 36px;
+                                    line-height: 57px;
+                                    
+                                }
+                            }
+                    }
+            }
+            .access{
+                text-align: center;
+                font-size: 66px;
+                width: 583px;
+            }
+            .access-p{
+                text-align: center;
+                font-size: 36px;
+                line-height: 65px;
+                width: 693px;
+            }
+            .devices{
+                margin-bottom: 90px;
+            }
+            .supercharge{
+                font-size: 66px;
+                text-align: center;
+                width: 839px;
+            }
+            .supercharge-p{
+                text-align: center;
+                font-size: 36px;
+                line-height: 65px;
+                width: 693px;
+            }
+            .icones{
+                display: flex;
+                flex-direction: column;
+                    .blacklist{
+                            img{
+                                width: 90px;
+                            }
+                        .icones-h3{
+                            font-size: 51px;
+                            width: 472px;
+                        }
+                        .icones-p{
+                            font-size: 36px;
+                            text-align: center;
+                            width: 703px;
+                            line-height: 54px;
+                            margin-bottom: 94px;
+                        }
+                    }
+                    .plain{
+                        height: auto;
+                        img{
+                            width: 90px;
+                            
+                        }
+                    .icones-h3{
+                        font-size: 51px;
+                        width: 472px;
+                    }
+                    .icones-p{
+                        font-size: 36px;
+                        text-align: center;
+                        width: 703px;
+                        line-height: 54px;
+                        margin-bottom: 94px;
+                    }
+                    }
+                    .sneak{
+                        height: auto;
+                        img{
+                            width: 90px;
+                    
+                        }
+                    .icones-h3{
+                        font-size: 51px;
+                        width: 472px;
+                        text-align: center;
+                    }
+                    .icones-p{
+                        font-size: 36px;
+                        text-align: center;
+                        width: 703px;
+                        line-height: 54px;
+                        margin-bottom: 94px;
+                    }
+                }
+                        
+            }
+            .logos{
+                flex-direction: column;
+                justify-content: space-between;
+                height: 800px;
+                    img{
+                        height: 80px;
+                        width: 310px;
+                    }
+
+            }
+            .clip{
+                text-align: center;
+                font-size: 66px;
+                width: 678px;
+            }
+            .clip-p{
+                text-align: center;
+                font-size: 36px;
+                line-height: 65px;
+                width: 693px;
+            }
+            .buttons-footer{
+                flex-direction: column; 
+                justify-content: center;
+                align-items: center; 
+                .ios{
+                    margin-bottom: 45px;
+                    font-size: 35px;
+                    border-radius: 63px;
+                    width: 400px;
+                    height: 85px;
+                }
+                .mac{
+                    font-size: 35px;
+                    border-radius: 63px;
+                    width: 400px;
+                    height: 85px;
+                }
+            }
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 906px;   
+                .footer-logo{
+                    img{
+                        width: 143px;
+                        margin-bottom: 40px;
+                    }
+                }
+                .footer-text{
+                    display: flex;
+                    .contend-1{
+                        flex-direction: column;
+                        text-align: center;
+                        width: 100%;
+                        font-size: 45px;
+                        line-height: 100px;
+                    }
+                    .contend-2{
+                        flex-direction: column;
+                        text-align: center;
+                        width: 100%;
+                        font-size: 45px;
+                        line-height: 100px;
+                        margin-bottom: 60px;
+                    }
+                }
+            .lista{
+                ul{
+                    width: 350px;
+                    li{
+                        img{
+                            width: 60px;
+                        }
+                    }
+                }
+        }}
+     
+}
+
+}
